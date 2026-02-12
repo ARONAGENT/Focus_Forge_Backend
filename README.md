@@ -45,7 +45,7 @@ In today's world, many students want to study and improve themselves. But the bi
 
 ## 🗺️ System Architecture
 
-<img width="1536" height="1024" alt="ChatGPT Image Feb 12, 2026, 08_01_24 PM" src="https://github.com/user-attachments/assets/cfef727a-4758-4c7a-b808-e8510a3cac4b" />
+<img width="1071" height="1331" alt="image" src="https://github.com/user-attachments/assets/91a93baa-f394-41d6-8017-799301fccf42" />
 
 > **Database Schema Design** - Complete system architecture showing relationships between entities
 
