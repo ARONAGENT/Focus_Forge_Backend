@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: focus_forge
+  ai:
+    openai:
+      api-key: ${api_key}
+      chat:
+        options:
+          model: gpt-4o-mini
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
+            table-name: user-chat-memory
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/my-vector-db
+    username: postgres
+    password: ${password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+jwt:
+  secretKey: ${jwt_secret}
+server:
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    org.springframework.ai.chat.client: DEBUG
+#weather.api.key: ${api_key2}
+#base.url: https://api.openweathermap.org
+
+server.port: 8081
+springdoc:
+  packages-to-scan: com.aronJourney.focus_forge
+  api-docs:
+      path: /v3/api-docs
+  swagger-ui:
+      path: /swagger-ui.html
+
